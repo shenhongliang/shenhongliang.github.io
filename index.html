@@ -19,12 +19,19 @@ body{height:100%;margin:0px;padding:0px;}
 
 
 <script type="text/javascript"> 
+var x = 0;
+var y = 0;
+getLocation();
 
-/*
+
+
+
+/**/ 
  	var oT=document.querySelectorAll('input')[0];
  	var oBtn=document.querySelectorAll('input')[1];
  	var map = new BMap.Map("container");         // 创建地图实例  
- 	var point = new BMap.Point(121.4501, 31.1574);  // 创建点坐标  
+    //var point = new BMap.Point(121.4501, 31.1574);  // 创建点坐标  
+ 	var point = new BMap.Point(x, y);  // 创建点坐标  
  	map.centerAndZoom(point, 15);
  	//滚轮缩放地图
  	map.enableScrollWheelZoom();
@@ -37,32 +44,14 @@ body{height:100%;margin:0px;padding:0px;}
 
 
 
- 	function getLocation(callback){
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(
-                function(p){
-                    callback(p.coords.latitude, p.coords.longitude);
-                },
-                function(e){
-                    var msg = e.code + "\n" + e.message;
-                }
-        );
-    }
-}
-
-*/ 
-
-
-
-
-
 function getLocation(){
  navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
         function(pos){ // 如果成功则执行该回调函数
-               var josn = {};
+               //var josn = {};
 
-              return josn = {"x":pos.coords.latitude,"y":pos.coords.longitude}
-
+              //return {"x":pos.coords.latitude,"y":pos.coords.longitude}
+             x = pos.coords.latitude ;
+             y = pos.coords.longitude ;
             /* 
             alert(
                 '  经度：' + pos.coords.latitude +
@@ -84,8 +73,7 @@ function getLocation(){
     );
  }
 
- var json = getLocation();
- alert(json);
+
 </script>  
 </body>  
 </html>
