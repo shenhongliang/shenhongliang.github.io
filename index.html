@@ -1,10 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	gdfgfg
-</body>
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>Hello, World</title>  
+<style type="text/css">  
+html{height:100%;}  
+body{height:100%;margin:0px;padding:0px;}  
+#container{ height:100%;}  
+</style>  
+	<!-- 秘钥 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDbPe4CVNYNRrgfQKjN8vHm77sl0MGxK"></script>
+</head>  
+<body>  
+<input type="text" id="info" />
+<input type="button" value="搜索" />
+<div id="container"></div> 
+
+
+<script type="text/javascript"> 
+ 	var oT=document.querySelectorAll('input')[0];
+ 	var oBtn=document.querySelectorAll('input')[1];
+ 	var map = new BMap.Map("container");         // 创建地图实例  
+ 	var point = new BMap.Point(121.4501, 31.1574);  // 创建点坐标  
+ 	map.centerAndZoom(point, 15);
+ 	//滚轮缩放地图
+ 	map.enableScrollWheelZoom();
+ 	var circle = new BMap.Circle(point,1000,{fillColor:"blue", strokeWeight:1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
+    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: false}});  
+  	oBtn.onclick=function(){
+  		map.addOverlay(circle);
+ 		local.searchNearby(oT.value,point,1000);	
+ 	};
+
+
+/*
+ 	function getLocation(callback){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(
+                function(p){
+                    callback(p.coords.latitude, p.coords.longitude);
+                },
+                function(e){
+                    var msg = e.code + "\n" + e.message;
+                }
+        );
+    }
+}
+
+*/ 
+ navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
+        function(pos){ // 如果成果则执行该回调函数
+            alert(
+                '  经度：' + pos.coords.latitude +
+                '  纬度：' + pos.coords.longitude +
+                '  高度：' + pos.coords.altitude +
+                '  精确度(经纬)：' + pos.coords.accuracy +
+                '  精确度(高度)：' + pos.coords.altitudeAccuracy +
+                '  速度：' + pos.coords.speed
+            );
+        }, function(err){ // 如果失败则执行该回调函数
+            alert(err.message);
+        }, { // 附带参数
+            enableHighAccuracy: false, // 提高精度(耗费资源)
+            timeout: 3000, // 超过timeout则调用失败的回调函数
+            maximumAge: 1000 // 获取到的地理信息的有效期，超过有效期则重新获取一次位置信息
+        }
+    );
+</script>  
+</body>  
 </html>
