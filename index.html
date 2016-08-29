@@ -52,12 +52,16 @@ body{height:100%;margin:0px;padding:0px;}
 
 */ 
 
-alert(getLocation().x)
+
+
+var json = getLocation();
+alert(json.x);
+
 function getLocation(){
  navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
         function(pos){ // 如果成功则执行该回调函数
 
-              return {x:pos.coords.latitude,y:pos.coords.longitude}
+              return {"x":pos.coords.latitude,"y":pos.coords.longitude}
 
             /* 
             alert(
