@@ -1,81 +1,70 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
-<title>Hello, World</title>  
-<style type="text/css">  
-html{height:100%;}  
-body{height:100%;margin:0px;padding:0px;}  
-#container{ height:100%;}  
-</style>  
-	<!-- 秘钥 -->
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDbPe4CVNYNRrgfQKjN8vHm77sl0MGxK"></script>
-</head>  
-<body>  
-<input type="text" id="info" />
-<input type="button" value="搜索" />
-<div id="container"></div> 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	div{ display: none; }
+	@-webkit-keyframes shake{
+		0%{
+			-webkit-transform:rotate(0);
+		}
+		25%{
+			-webkit-transform:rotate(10deg);
+		}
+		50%{
+			-webkit-transform:rotate(0);
+		}
+		75%{
+			-webkit-transform:rotate(-10deg);
+		}
+		100%{
+			-webkit-transform:rotate(0);
+		}
+	}
 
+	.box{ display: block; width:300px; height:300px; background:red; margin:100px auto;}
+	
+	.shake{ -webkit-animation:shake 0.3s linear 3;}
+</style>
+<script>
+	if(window.DeviceMotionEvent){
+		//alert('支持重力感应');
+		
+		var lastX=0;
+		var lastY=0;
+		var lastZ=0;
+		
+		//当重力感应发生变化的时候
+		window.addEventListener('devicemotion',function(ev){
+			
+			//重力感应加速度运动的值
+			var acc=ev.accelerationIncludingGravity;
+			
+			//acc.x
+			//acc.y
+			//acc.z
+			
+			if(Math.abs(acc.x-lastX)>20 || Math.abs(acc.y-lastY)>20 || Math.abs(acc.z-lastZ)>20){
+				var oDiv=document.querySelector('div');
+				oDiv.classList.add('shake');
+				//运动完毕时
+				oDiv.addEventListener('webkitAnimationEnd',function(){
+					oDiv.classList.remove('shake');
+				},false);
+			}
+			lastX=acc.x;
+			lastY=acc.y;
+			lastZ=acc.z;
+		},false);
+			
+	}else{
+		alert('不支持重力感应');	
+	}
+	</script>
+</head>
 
-<script type="text/javascript"> 
-alert(2)
-var x = 0;
-var y = 0;
-getLocation();
-
-
-
-
-/**/ 
- 	var oT=document.querySelectorAll('input')[0];
- 	var oBtn=document.querySelectorAll('input')[1];
- 	var map = new BMap.Map("container");         // 创建地图实例  
-    //var point = new BMap.Point(121.4501, 31.1574);  // 创建点坐标  
- 	var point = new BMap.Point(x, y);  // 创建点坐标  
- 	map.centerAndZoom(point, 15);
- 	//滚轮缩放地图
- 	map.enableScrollWheelZoom();
-
-    //创建搜索半径
- 	var circle = new BMap.Circle(point,1000,{fillColor:"blue", strokeWeight:1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
-    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: false}});  //搜索查询
-  	oBtn.onclick=function(){
-  		map.addOverlay(circle);
- 		local.searchNearby(oT.value,point,1000);	
- 	};
-
-
-
-function getLocation(){
- navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
-        function(pos){ // 如果成功则执行该回调函数
-               //var josn = {};
-              //return {"x":pos.coords.latitude,"y":pos.coords.longitude}
-             x = pos.coords.latitude ;
-             y = pos.coords.longitude ;
-            /* 
-            alert(
-                '  经度：' + pos.coords.latitude +
-                '  纬度：' + pos.coords.longitude +
-                '  高度：' + pos.coords.altitude +
-                '  精确度(经纬)：' + pos.coords.accuracy +
-                '  精确度(高度)：' + pos.coords.altitudeAccuracy +
-                '  速度：' + pos.coords.speed
-            );
-
-            */
-        },function(err){ // 如果失败则执行该回调函数
-            alert(err.message);
-        },{ // 附带参数
-            enableHighAccuracy: false, // 提高精度(耗费资源)
-            timeout: 3000, // 超过timeout则调用失败的回调函数
-            maximumAge: 1000 // 获取到的地理信息的有效期，超过有效期则重新获取一次位置信息
-        }
-    );
- }
-
-
-</script>  
-</body>  
+<body>
+	<div class="box"></div>
+</body>
 </html>
