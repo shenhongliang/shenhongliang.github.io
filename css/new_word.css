@@ -1,0 +1,297 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p{margin:0;padding:0;}
+body{font-size: 12px;font-family: "Microsoft YaHei","微软雅黑","SimSun","宋体";}
+img{border:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+ol,ul{list-style:none;}
+
+html,body{ width: 100%;height: 100%;overflow: hidden;}
+.load_txt{position: absolute;top:65%;left:50%;width: 210px;text-align: center;margin-left: -105px;z-index: 888899;font-size: 30px;color:#fff;}
+/*背景色*/
+.color{position:absolute; width:100%; height:100%;}
+#color1{
+  background: rgb(171,216,246); 
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(171,216,246,1)), color-stop(33%,rgba(249,222,223,1)), color-stop(64%,rgba(241,217,225,1)), color-stop(100%,rgba(171,216,246,1))); 
+  background: -webkit-linear-gradient(-45deg, rgba(171,216,246,1) 0%,rgba(249,222,223,1) 33%,rgba(241,217,225,1) 64%,rgba(171,216,246,1) 100%); 
+  background: linear-gradient(135deg, rgba(171,216,246,1) 0%,rgba(249,222,223,1) 33%,rgba(241,217,225,1) 64%,rgba(171,216,246,1) 100%); 
+  -webkit-animation: color1 2s linear 0s infinite alternate;
+}
+#color2{
+  background: rgb(249,222,223); 
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(249,222,223,1)), color-stop(35%,rgba(171,216,246,1)), color-stop(62%,rgba(171,228,242,1)), color-stop(100%,rgba(241,217,225,1))); 
+  background: -webkit-linear-gradient(-45deg, rgba(249,222,223,1) 0%,rgba(171,216,246,1) 35%,rgba(171,228,242,1) 62%,rgba(241,217,225,1) 100%); 
+  background: linear-gradient(135deg, rgba(249,222,223,1) 0%,rgba(171,216,246,1) 35%,rgba(171,228,242,1) 62%,rgba(241,217,225,1) 100%); 
+  -webkit-animation: color2 2s linear 0s infinite alternate;
+}
+@-webkit-keyframes color1{from{opacity: 0;}to{opacity: 1;}} 
+@-webkit-keyframes color2{from{opacity: 1;}to{opacity: 0;}} 
+
+.container{width: 100%;height: 100%;position: absolute;top: 0%;left: 0%;}
+.container .page{width: 100%; height: 100%; position: absolute;}
+.container .page1{top: 0;left: 0; -webkit-perspective:900px;perspective:900px;-webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+.container .page2{top: 0;left: 120%;background: url(../images/clock_bg.jpg);}
+.container .page3{top: 110%;left: 10%;background: #000;overflow: hidden;}
+.container .page4{top: 130%;left: 120%;}
+
+/*返回上一页*/
+.single a{width:90px;height:90px; color: #fff;z-index: 999;
+  font-size: 12px;font-weight: bold;text-align: center;text-decoration: none;
+  line-height: 90px;cursor:pointer;display:block;position:relative;}
+ .single a:after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 1px 2px rgba(255,255,255,0.8); top: 50%; left: 50%; margin-top: -60px; margin-left: -60px; z-index: 3; opacity: 0; -webkit-animation: go 1s 0.5s infinite ease-out;  animation: go 1s 0.5s infinite ease-out; }
+@-webkit-keyframes go { 
+  0% { opacity: 0;-webkit-transform: scale(0.1);} 
+  50% {opacity: 1; }
+  100%{opacity: 0;-webkit-transform: scale(1.2); } 
+}
+
+@keyframes go {
+  0% { opacity: 0; transform: scale(0.1); }
+  50% {opacity: 1; }
+  100%{opacity: 0;transform: scale(1.2); } 
+}
+
+/*新世界按钮*/
+#new_words{
+position: absolute;
+top:50%;
+left:50%;
+margin: -92px 0 0 -91px;
+width: 183px;
+height: 184px;
+border-radius: 50%;
+cursor: pointer;
+z-index: 88888;
+
+}
+#new_words canvas{width: 183px;height: 184px;border-radius: 50%;}
+
+#left_men{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 1000px;
+	height: 100%;
+	background: #000;
+	z-index: 8888;
+}
+#right_men{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 1000px;
+	height: 100%;
+	background: #000;
+	z-index: 8888;
+}
+
+/*主题九宫格开始*/
+#new_list {position: absolute;top:50%;left:50%;width:516px; height:516px; margin:-258px 0 0 -258px;}
+#new_list li {width:150px; height:150px;cursor: pointer;
+ background:#000 url(../images/list1.jpg) no-repeat; 
+ border:1px solid rgba(72,209,252,0.7); margin:10px; float:left;overflow: hidden; }
+#new_list li:nth-child(2){background-image: url(../images/list2.jpg);}
+#new_list li:nth-child(3){background-image: url(../images/list3.jpg);}
+#new_list li:nth-child(4){background-image: url(../images/list4.jpg);}
+#new_list li:nth-child(5){background-image: url(../images/list5.jpg);}
+#new_list li:nth-child(6){background-image: url(../images/Basketball.png);-webkit-background-size: 100% 100%;background-size: 100% 100%;}
+#new_list li:nth-child(7){background-image: url(../images/list7.jpg);}
+#new_list li:nth-child(8){background-image: url(../images/list8.jpg);}
+#new_list li:nth-child(9){background-image: url(../images/list9.jpg);}
+
+#new_list li a{
+  content:attr(data-text);
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;line-height:150px;
+  font-size:20px;
+  color: #fff;
+  font-weight: bold;
+  background:rgba(90,222,255,.6);
+  text-decoration: none;
+  text-align:center;
+  -webkit-transform-origin:-50% 50%;
+  transform-origin:-50% 50%;
+  -webkit-transform:rotate3d(0,0,1,90deg);
+  transform:rotate3d(0,0,1,90deg);
+  -webkit-transition:-webkit-transform .3s ease-in;
+  transition:transform .3s ease-in;
+}
+#new_list li:hover a,#new_list li:hover{
+  -webkit-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
+}
+#new_list li:hover a{
+  -webkit-transform:rotate3d(0,0,1,0deg);
+  transform:rotate3d(0,0,1,0deg);
+}
+
+/*主题九宫格结束*/
+
+ .close{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+/*GaGa开始*/
+#GaGa{position: absolute;top:0;width: 100%;height: 100%;background: rgba(0,0,0,.8);}
+.abs{left:120%;}
+.GaGa{width:516px;height: 648px;position: absolute;top:50%;left:50%;margin: -324px 0 0 -258px;}
+.GaGa .close{position: absolute;top:-2px;right:-50px;}
+#GaGa ul{ position:relative;}
+#GaGa ul li{float:left;width:170px; height:214px; margin:1px;}
+#GaGa ul li img{width:170px;}
+#GaGa .box{ border:1px dashed red;}
+
+input.button{ position: absolute;top:50%;left:-80px; margin-top: -20px;font-size: 18px;color: #333;font-weight: bold;
+  padding: 8px 15px;z-index:100;text-shadow: 1px 1px 0 rgba(255,255,255,0.4);border: 1px solid #ccc;cursor: pointer; border-radius: 4px;
+  box-shadow: 0 0 1px #fff inset;
+  -webkit-animation: but 1s ease 0s infinite alternate;
+  animation: but 1s ease 0s infinite alternate;
+}
+@-webkit-keyframes but{from{box-shadow: 1px 1px 60px #FF80B5;-webkit-transform:rotate(-2deg);}
+to{box-shadow: 1px 1px 50px #14BD9C;-webkit-transform:rotate(2deg);}
+}
+@keyframes but{from{box-shadow: 1px 1px 60px #FF80B5;transform:rotate(-2deg);}
+to{box-shadow: 1px 1px 50px #14BD9C;transform:rotate(2deg);}} 
+/*GaGa结束 钢琴开始*/
+
+#piano{position: absolute;left:0;top:100%;width: 100%;height: 100%;background: url(../images/piano.jpg) no-repeat center top;-webkit-background-size: 100% 100%;
+    background-size: 100% 100%;opacity: 0;}
+.piano{position: absolute;width: 928px;height: 38px;top:50%;left:50%;margin:-19px 0 0 -464px;}
+.piano li {position:relative;width:104px; height:36px; border:1px solid #000;margin-right: 10px;background: #fff; float:left; }
+.piano li span {position:absolute; left:0; top:0; width:100%; height:100%; 
+  text-align:center; line-height:36px; z-index:2;font-size: 20px;font-weight: bold;}
+.piano li em {position:absolute; left:0; bottom:0; width:100%; height:0; z-index:1; opacity:0.4; }
+#piano .close{top:-50px;}
+
+/*钢琴结束 拖拽相册 开始*/
+
+#Darg1{position: absolute;width:100%;height:100%;background:#000;opacity: 0;}
+.abs_D{top:100%;left:100%;}
+.Darg{position: absolute;top:50%;left:50%;margin:-200px 0 0 -400px;width:800px;height:400px;background:#fff; overflow: hidden;}
+#Darg1 ul{ position:absolute;left:0;top:110px;}
+#Darg1 ul li{width:260px;height:179px; float: left; position:relative;}
+#Darg1 img{width:260px;height:179px; position:absolute;left:0;top:0;}
+
+/* 拖拽相册 结束 iPad APP开始*/
+#iPad_box{position: absolute;width:100%;height:100%;background:#000;opacity: 0;z-index: -1;}
+.iPad_box{position: absolute;top:50%;left:50%;
+  margin:-225px 0 0 -172px;width:344px; height:451px; background:url(../images/icon/icon_bg.jpg) no-repeat;
+     padding: 50px 0 0 50px;
+ }
+.iPad_box #iPad_ul{ position:relative;width:298px; height:390px; }
+.iPad_box #iPad_ul li{float:left;width:50px; height:50px; line-height:50px; 
+  text-align:center; font-size:30px; margin:12px; }
+.iPad_box #iPad_ul li img{ height:50px; width:50px;cursor: pointer;}
+
+/* iPad APP 结束 百达翡丽怀表开始*/
+.clock_box{ position:absolute;left:300px; top:100px;width:356px; height:471px;background: url(../images/clock_box.png)  no-repeat;}
+#Clock{ position:absolute;left:22px; top:132px;width:300px; height:300px; border:3px solid #CE944A; border-radius:50%; 
+background: #E8E5DD;}
+#hours,#minutes,#seconds{position:absolute;z-index: 88;border-radius: 8px;}
+#hours{left:145px; top:90px;  width:10px; height:80px; background:#949495;-webkit-transform-origin: 5px 60px; transform-origin: 5px 60px;}
+#minutes{left:146px; top:50px; width:8px; height:130px; background:#949495;-webkit-transform-origin: 4px 100px;transform-origin: 4px 100px;}
+#seconds{left:141px; top:15px;width:18px;height:185px; background:url(../images/sechand.png)  no-repeat;-webkit-transform-origin: 9px 135px;transform-origin: 9px 135px;}
+#Clock span{ position:absolute;left:50%;  margin-left:-1px; top:0; width:2px; height:8px; background:#CFD1D0;-webkit-transform-origin: center 150px;transform-origin: center 150px;}
+#Clock span.on{ height:12px;width:4px;margin-left:-2px;}
+#Clock span em {font-size: 16px;font-weight: bold; color: #CE944A;position:absolute; left:50%; top:12px; margin-left:-20px;width:40px; font-style:normal; text-align:center;}
+#year_day{position:absolute;left:650px; top:460px;font-size: 20px;background: #fff;color: #904A40;width: 340px;line-height: 40px;text-align: center;border-radius: 4px;}
+#week{position:absolute;left:492px; top:444px;padding: 2px 5px;
+  font-size: 16px;background: #fff;color: #000;border-radius: 4px;
+  box-shadow:inset 1px 3px 1px #949495;
+}
+/*百达翡丽怀表结束 */
+
+/*篮球*/
+#Basketball{ position:absolute;left:0;top:0;width:185px; height:183px; background:url(../images/Basketball.png) no-repeat;}
+.Ba_box{position: absolute;right:0px;top:120px;}
+
+.page2 input.button,.page3 input.button,.page4 input.button{
+   position: absolute;top:80%;left:800px;
+}
+
+/*八神庵*/
+ #Game{width: 100%;height: 100%;}
+.Game{width: 1000px;height: 320px;position: absolute;top:50%;left:50%;margin: -160px -500px;}
+.Game .boss{position: relative;z-index: 2;float: left; width:950px; height:319px;  background:#000;}
+.Game .boss canvas{width:950px; height:319px; }
+.Game .single{position:absolute; left:455px;top:105px;z-index: 3;width:90px;height:90px;}
+.Game p{color: #fff;position:absolute; left:250px;top:150px;z-index: 3;font-size: 40px;font-weight: bold;display: none;}
+.Game .single em{width:90px;height:90px; color: #fff;font-size: 40px;font-weight: bold;text-align: center;line-height: 90px;cursor:pointer;display:block;position:relative;}
+.Game .single em:after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 1px 2px rgba(255,255,255,0.8); top: 50%; left: 50%; margin-top: -60px; margin-left: -60px; z-index: 3; opacity: 0; -webkit-animation: go 1s 0.5s infinite ease-out; -moz-animation: go 1s 0.5s infinite ease-out; animation: go 1s 0.5s infinite ease-out; }
+@-webkit-keyframes go { 
+  0% { opacity: 0;-webkit-transform: scale(0.1);} 
+  50% {opacity: 1; }
+  100%{opacity: 0;-webkit-transform: scale(1.2); } 
+}
+
+@keyframes go {
+  0% { opacity: 0; transform: scale(0.1); }
+  50% {opacity: 1; }
+  100%{opacity: 0;transform: scale(1.2); } 
+}
+
+.page1 .enter1{
+ -webkit-animation:enter1 2s ease 0s;
+ animation:enter1 2s ease 0s;
+}
+ .page1 .enter2{
+ -webkit-animation:enter2 2s ease 0s ;
+ animation:enter2 2s ease 0s ;
+}
+.page1 .leave1{
+ -webkit-animation:leave1 2s ease 0s;
+ animation:leave1 2s ease 0s;
+}
+.page1 .leave2 {
+ -webkit-animation:leave2 2s ease 0s ;
+ animation:leave2 2s ease 0s ;
+}
+@-webkit-keyframes enter1{
+    from{-webkit-transform:rotateY(70deg) rotateX(30deg) translateZ(600px);}
+    to{-webkit-transform:none;}
+}
+@keyframes enter1{
+    from{transform:rotateY(70deg) rotateX(30deg) translateZ(600px);}
+    to{transform:none;}
+}
+@-webkit-keyframes enter2{
+   from{-webkit-transform:rotateY(150deg) rotateX(150deg) translateZ(600px);}
+   to{-webkit-transform:none;}
+}
+@keyframes enter2{
+   from{transform: rotateY(150deg) rotateX(150deg) translateZ(600px);}
+   to{transform:none;}
+}
+@-webkit-keyframes leave1{
+   from{-webkit-transform:none;}
+   to{-webkit-transform:rotateY(30deg) rotateX(50deg) translateZ(600px);}
+}
+@keyframes leave1{
+   from{transform:none;}
+   to{transform:rotateY(30deg) rotateX(50deg) translateZ(600px);}
+}
+@-webkit-keyframes leave2{
+   0%{-webkit-transform:none;}
+   10%{left:120%;-webkit-transform:translateZ(600px) rotateY(50deg,30deg) ;}
+
+   100%{left:120%;top:0;-webkit-transform:translateZ(600px) rotateY(50deg,30deg) ;}
+}
+
+
+
+
+
+
+

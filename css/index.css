@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,form,input,textarea,p{margin:0;padding:0;}
+body{font-size: 12px;font-family: "Microsoft YaHei","微软雅黑","SimSun","宋体";}
+img{border:0;}
+ol,ul{list-style:none;}
+/*loading*/
+.load_txt{position: absolute;top:65%;left:50%;width: 210px;text-align: center;margin-left: -105px;font-size: 30px;color:#fff;}
+#loading{position: absolute;top:0;left:0;width: 100%;height: 100%;background: #000;z-index: 999888;}
+#loading div{position: absolute;top:50%;left:50%;width: 210px;height: 210px;margin: -105px 0 0 -105px;background: url(../images/loading.png) no-repeat;-webkit-animation:zhuan 2s linear 0s infinite;animation:zhuan 2s linear 0s infinite;}
+#loading p{position: absolute;top:50%;left:50%;width: 146px;height: 146px;margin: -73px 0 0 -73px;color: #fff;font-size: 30px;text-align: center;line-height: 146px;}
+#loading p span{float: right;color:red;position: relative;}
+#loading p span:nth-child(1){-webkit-animation:loading 1s ease 0s infinite alternate;animation:loading 1s ease 0s infinite alternate;}
+#loading p span:nth-child(2){-webkit-animation:loading 1s ease 0.2s infinite alternate;animation:loading 1s ease 0.2s infinite alternate;}
+#loading p span:nth-child(3){-webkit-animation:loading 1s ease 0.4s infinite alternate;animation:loading 1s ease 0.4s infinite alternate;}
+@-webkit-keyframes loading{
+	0%{color:red;top: -3px;}
+	100%{color: yellow;top: 3px;}
+}
+@keyframes loading{
+	0%{color:red;top: -3px;}
+	100%{color: yellow;top: 3px;}
+}
+@-webkit-keyframes zhuan{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(360deg);}
+}
+@keyframes zhuan{
+		0%{transform:rotate(0deg);}
+		100%{transform:rotate(360deg);}
+}
+
+#loading strong{font-size: 30px;color: #fff;position: absolute;top:50%;left:50%;margin:-20px 0 0 -225px;}
+
+html,body{width:100%;height: 100%;overflow: hidden;background:#50A8D6;}
+
+#banner li{background-size: 100% 100% !important;position: absolute;width: 100%;height: 800px;background:#50A8D6 url(../images/1.jpg) no-repeat center top; opacity: 0; }
+#banner li.no2{background:#191F4F url(../images/2.jpg) no-repeat center top; }
+#banner li.no3{background:#2885C2 url(../images/3.jpg) no-repeat center top; }
+#banner li.no4{background:#C5A373 url(../images/4.jpg) no-repeat center top; }
+#banner li.no5{background:#2B76B7 url(../images/5.jpg) no-repeat center top; }
+#banner li.no6{background:#E6E9D6 url(../images/6.jpg) no-repeat center top; }
+
+.center{position: relative;width: 1000px;margin:0 auto;}
+.center .btn{position: absolute;top:547px;left:370px;width: 180px;height: 60px;background: url(../images/paopao.png) top left,url(../images/paopao.png) right bottom,-webkit-linear-gradient(top,#E7E6AC,#90C871);linear-gradient(top,#E7E6AC,#90C871);-webkit-transition:all 1s ease 0s;transition:all 1s ease 0s;border-radius: 15px;box-shadow: 1px 1px 1px black;-webkit-animation:haha 1s linear 0s infinite alternate;animation:haha 1s linear 0s infinite alternate;}
+.btn:hover{-webkit-animation:xixi 1s linear 0s infinite alternate;animation:xixi 1s linear 0s infinite alternate;}
+	@-webkit-keyframes haha{from{box-shadow: 1px 1px 1px black;-webkit-transform:rotate(-2deg);}
+		to{box-shadow: 1px 1px 30px yellow , 1px 1px 60px greenyellow , 1px 1px 90px yellowgreen;-webkit-transform:rotate(2deg);}}
+	@keyframes haha{from{box-shadow: 1px 1px 1px black;transform:rotate(-2deg);}
+		to{box-shadow: 1px 1px 30px yellow , 1px 1px 60px greenyellow , 1px 1px 90px yellowgreen;transform:rotate(2deg);}}
+	
+	@-webkit-keyframes xixi{from{-webkit-transform:translateY(-5px);}to{ -webkit-transform:translateY(5px);}}
+	@keyframes xixi{from{transform:translateY(-5px);}to{transform:translateY(5px);}}
+.btn:hover{background-position: left bottom , right top;}
+.center .btn a{display: block;width: 180px;height: 60px;}
+.center .btn a:link,.center .btn a:visited{font:18px/60px "微软雅黑","宋体";color: #0080FF;text-align: center;text-decoration: none;}
+.center .btn a:hover{color: green;}
+#rocket{width: 211px;height: 536px;position: absolute;right: -100px;top: 700px;background: url(../images/rocket.png) no-repeat ;
+    -webkit-animation:rocket 4s ease-in-out 0s infinite normal;
+    animation:rocket 4s ease-in-out 0s infinite normal;
+}
+
+@-webkit-keyframes rocket{
+	from{top: 700px;}
+	to{top: -600px;}
+}
+@keyframes rocket{
+	from{top: 700px;}
+	to{top: -600px;}
+}
+#color_plus span{position: absolute;top:0;left:0;font-size: 12px;font-weight: bold;}
+
