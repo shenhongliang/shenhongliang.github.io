@@ -1,0 +1,193 @@
+﻿/* 
+*版本: v0.1
+*名称: 展示效果样式表
+*时间: 2014年10月17日14:23:00
+*作者: Leon
+*/
+
+.showList {
+    overflow: hidden;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+
+    .showList li {
+        display: none;
+        float: left;
+        overflow: hidden;
+    }
+
+    .showList li img{
+        width:100%;height:100%;
+    }
+
+    .showList .active {
+        display: block;
+    }
+
+    .showList img {
+        display: block;
+        
+    }
+
+.stage {
+    display:none;
+}
+
+.showstage{
+    width:50%;height:50%;z-index:999;position:absolute;top:0;left:0;background:url(../images/in1.jpg) ;
+    background-repeat:no-repeat;
+    background-position: 0 0 ;
+    background-size:200% 200%;
+}
+.showstage:nth-child(2) {
+    width:50%;height:50%;z-index:999;position:absolute;top:0;left:50%;background:url(../images/in1.jpg);
+    background-repeat:no-repeat;
+    background-position: 100% 0;
+    background-size:200% 200%;
+}
+.showstage:nth-child(3) {
+    width:50%;height:50%;z-index:999;position:absolute;top:50%;left:0;background:url(../images/in1.jpg);
+    background-repeat:no-repeat;
+    background-position:  0 100%;
+    background-size:200% 200%;
+}
+.showstage:nth-child(4) {
+    width:50%;height:50%;z-index:999;position:absolute;top:50%;left:50%;background:url(../images/in1.jpg);
+    background-repeat:no-repeat;
+    background-position: 100% 100%;
+    background-size:200% 200%;
+}
+.vote{
+  width:30%; position:absolute; z-index:1000; bottom:2%; left:35%;
+}
+.p_a{ position:absolute;}
+.circle1{
+	width:48%; z-index:101; left:36%; bottom:10%;
+}
+.circle2{
+	width:50%;  z-index:100; left:0%; bottom:0%;
+}
+.circle3{
+	width:40%;  z-index:100; left:43%; bottom:0%;
+}
+.circle4{
+	width:40%;  z-index:100; left:60%; bottom:0%;
+}
+.circle5{
+	width:30%;  z-index:100; left:-10%;  top:4%;
+}
+.circle6{
+	width:34%;  z-index:100; left:-4%; top:-11%;
+}
+.circle7{
+	width:23%;  z-index:100; left:-8%; top:-1%;
+}
+.circle8{
+	width:33%;  z-index:100; left:7%;  top:-1%;
+}
+.circle9{
+	width:33%;  z-index:100; left:-7%;  bottom:0%;
+}
+.logo_test{
+	z-index:200; left:0; top:0; width:43%; opacity:0.6; left:2%; top:2%;
+}
+.weixin_text{
+	width:68%; position:absolute; z-index:1000; left:16%; top:72%;
+}
+.animation1{
+	-webkit-animation-name:ani1;
+	-webkit-animation-duration:4s;
+	-webkit-animation-fill-mode:both;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+	animation-name:ani1;
+	animation-duration:1s;
+	animation-fill-mode:both;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+}
+.delay1{
+	-webkit-animation-delay:0.5s;
+}
+.delay2{
+	-webkit-animation-delay:1.5s;
+}
+.delay3{
+	-webkit-animation-delay:2.5s;
+}
+.delay4{
+	-webkit-animation-delay:3s;
+}
+@-webkit-keyframes ani1{
+	0%{
+		 opacity:0;transform:scale(0.5);
+	}
+	25%{
+		  transform:scale(0.75); opacity:0.5;
+	}
+	50%{
+		  transform:scale(1); opacity:1;
+	}
+	75%{
+		  transform:scale(0.75); opacity:0.5;
+	}
+	100%{
+		 transform:scale(0.5); opacity:0;
+	}
+}
+
+/*.stageShowAnimate {
+    animation:SSA 1s forwards;
+    -moz-animation:SSA 1s forwards;  
+    -webkit-animation:SSA 1s forwards;
+}
+ 
+@keyframes SSA
+{
+    0%{transform:scale(.6,.6);opacity:0;}
+    90% { }
+    100%{transform:scale(1,1);opacity:1;}
+}
+@-moz-keyframes SSA 
+{
+    0%{-moz-transform:scale(.6,.6);opacity:0;}
+    100%{-moz-transform:scale(1,1);opacity:1;}
+}
+@-webkit-keyframes SSA{
+    0%{-webkit-transform:scale(.6,.6);opacity:0;}
+    100%{-webkit-transform:scale(1,1);opacity:1;}
+}*/
+
+.handTip2 {
+    width:10%;position:absolute;right:2%;top:45%;z-index:121;opacity:0.7;
+    animation:hand2 2s linear forwards;
+    -moz-animation:hand2 2s linear forwards;  /* Firefox */
+    -webkit-animation:hand2 2s linear forwards; /* Safari and Chrome */
+    animation-iteration-count:4;
+    -moz-animation-iteration-count:4;  /* Firefox */
+    -webkit-animation-iteration-count:4; /* Safari 和 Chrome */
+}
+@keyframes hand2
+{
+    0%{transform:translateX(0)}
+    90% { transform: translateX(-55px); opacity: 0.1; }
+    100%{transform:translateX(-60px);opacity:0;}
+}
+@-moz-keyframes hand2 /* Firefox */
+{
+    0%{-moz-transform:translateX(0)}
+    90% { -moz-transform: translateX(-55px); opacity: 0.1; }
+    100%{-moz-transform:translateX(-60px);opacity:0;}
+}
+@-webkit-keyframes hand2{
+    0%{-webkit-transform:translateX(0)}
+    90% { -webkit-transform: translateX(-55px); opacity: 0.1; }
+    100%{-webkit-transform:translateX(-60px);opacity:0;}
+}
+
+.showBtn {
+    width:90px;height:90px;position:absolute;bottom:10%;left:2%;z-index:111;
+}
+

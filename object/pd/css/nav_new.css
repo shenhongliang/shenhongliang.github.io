@@ -1,0 +1,65 @@
+﻿/*
+*
+*
+*
+*/
+.nav_compass{width:580px;height:580px;overflow:hidden;z-index:99;position:absolute;top:50%; margin-top:-290px;left:30px;border-radius:50% 50%;-moz-border-radius:50% 50%;-webkit-border-radius:50% 50%; }
+.nav_compass .out{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0;z-index:99;}
+.nav_compass .out .link_C0{width:100%;height:100%;}
+.nav_compass .out div img{z-index:100}
+.nav_compass .out .coverSpan{width:100%;height:100%;display:block;position:absolute;top:0;left:0;z-index:101;opacity:0;background:#000}
+.nav_compass .out .active .coverSpan{display:none}
+.middle{width:60%;height:60%;position:absolute;top:20%;left:20%;z-index:102;overflow:hidden;border-radius:50% 50%;-moz-border-radius:50% 50%;-webkit-border-radius:50% 50%}
+.middle .bg{position:absolute;top:0;left:0;z-index:99;width:100%;height:100%}
+.link_C1{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0;overflow:hidden;border-radius:50%;z-index:105;-webkit-transform:rotate(-20deg);-moz-transform:rotate(-20deg);-ms-transform:rotate(-20deg);-o-transform:rotate(-20deg);transform:rotate(-20deg)}
+.link_C1 div{display:block;z-index:99;position:absolute;left:67.85%;top:40.5%;width:30%;height:20%;-webkit-transform-origin:-58% 50%;-moz-transform-origin:-58% 50%;-ms-transform-origin:-58% 50%;-o-transform-origin:-58% 50%;transform-origin:-58% 50%}
+.link_C1 div:before{display:block;width:100%;height:80%;content:"";  position:absolute;left:0;top:0;z-index:99;border-width:1px 0 0 0;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;-o-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(-30deg);-moz-transform:rotate(-30deg);-ms-transform:rotate(-30deg);-o-transform:rotate(-30deg);transform:rotate(-30deg);-webkit-transition:.75s;-moz-transition:.75s;-ms-transition:.75s;-o-transition:.75s;transition:.75s}
+.link_C1 div:after{display:block;width:100%;height:80%;content:"";position:absolute;left:0;bottom:0;z-index:99;border-width:0 0 1px 0;-webkit-transform-origin:0 100%;-moz-transform-origin:0 100%;-ms-transform-origin:0 100%;-o-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);-ms-transform:rotate(30deg);-o-transform:rotate(30deg);transform:rotate(30deg);-webkit-transition:.75s;-moz-transition:.75s;-ms-transition:.75s;-o-transition:.75s;transition:.75s}
+
+.link_C1 div:nth-child(1){-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}
+.link_C1 div:nth-child(2){-webkit-transform:rotate(60deg);-moz-transform:rotate(60deg);-ms-transform:rotate(60deg);-o-transform:rotate(60deg);transform:rotate(60deg)}
+.link_C1 div:nth-child(3){-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg);-ms-transform:rotate(120deg);-o-transform:rotate(120deg);transform:rotate(120deg)}
+.link_C1 div:nth-child(4){-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}
+.link_C1 div:nth-child(5){-webkit-transform:rotate(240deg);-moz-transform:rotate(240deg);-ms-transform:rotate(240deg);-o-transform:rotate(240deg);transform:rotate(240deg)}
+.link_C1 div:nth-child(6){-webkit-transform:rotate(300deg);-moz-transform:rotate(300deg);-ms-transform:rotate(300deg);-o-transform:rotate(300deg);transform:rotate(300deg)}
+
+.link_C0{ width:100%; height:100%;overflow:hidden; position:absolute; z-index:105; left:0; top:0;}
+.link_C0 div{display:block;z-index:99;position:absolute;left:68.85%;top:36.5%; width:32%;height:27%;-webkit-transform-origin:-58% 50%;-moz-transform-origin:-58% 50%;-ms-transform-origin:-58% 50%;-o-transform-origin:-58% 50%;transform-origin:-58% 50%}
+.link_C0 div:before{display:block;width:100%;height:80%;content:""; position:absolute;left:0;top:0;z-index:99;border-width:1px 0 0 0;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;-o-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(-30deg);-moz-transform:rotate(-30deg);-ms-transform:rotate(-30deg);-o-transform:rotate(-30deg);transform:rotate(-30deg);-webkit-transition:.75s;-moz-transition:.75s;-ms-transition:.75s;-o-transition:.75s;transition:.75s}
+.link_C0 div:after{display:block;width:100%;height:80%;content:"";position:absolute;left:0;bottom:0;z-index:99;border-width:0 0 1px 0;-webkit-transform-origin:0 100%;-moz-transform-origin:0 100%;-ms-transform-origin:0 100%;-o-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);-ms-transform:rotate(30deg);-o-transform:rotate(30deg);transform:rotate(30deg);-webkit-transition:.75s;-moz-transition:.75s;-ms-transition:.75s;-o-transition:.75s;transition:.75s}
+.link_C0 div:nth-child(1){-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}
+.link_C0 div:nth-child(2){-webkit-transform:rotate(60deg);-moz-transform:rotate(60deg);-ms-transform:rotate(60deg);-o-transform:rotate(60deg);transform:rotate(60deg)}
+.link_C0 div:nth-child(3){-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg);-ms-transform:rotate(120deg);-o-transform:rotate(120deg);transform:rotate(120deg)}
+.link_C0 div:nth-child(4){-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}
+.link_C0 div:nth-child(5){-webkit-transform:rotate(240deg);-moz-transform:rotate(240deg);-ms-transform:rotate(240deg);-o-transform:rotate(240deg);transform:rotate(240deg)}
+.link_C0 div:nth-child(6){-webkit-transform:rotate(300deg);-moz-transform:rotate(300deg);-ms-transform:rotate(300deg);-o-transform:rotate(300deg);transform:rotate(300deg)}
+
+.in{width:20%;height:20%;position:absolute;left:40%;top:40%;z-index:111}
+
+.videoDiv {width:640px;height:500px;position:absolute;top:200px;left:0;display:none;}
+
+/*********************************************************************************************/
+/*动画Class*/
+.rotate-go{animation:go 20s linear infinite;-moz-animation:go 20s linear infinite;-webkit-animation:go 20s linear infinite}
+.rotate-back{animation:back 20s linear infinite;-moz-animation:back 20s linear infinite;-webkit-animation:back 20s linear infinite}
+
+/*********************************************************************************************/
+/*动画*/
+@keyframes go{0%{transform:rotate(0deg)}
+100%{transform:rotate(359deg)}
+}
+@-moz-keyframes go{0%{-moz-transform:rotate(0deg)}
+100%{-moz-transform:rotate(359deg)}
+}
+@-webkit-keyframes go{0%{-webkit-transform:rotate(0deg)}
+100%{-webkit-transform:rotate(359deg)}
+}
+@keyframes back{0%{transform:rotate(0deg)}
+100%{transform:rotate(-359deg)}
+}
+@-moz-keyframes back{0%{-moz-transform:rotate(0deg)}
+100%{-moz-transform:rotate(-359deg)}
+}
+@-webkit-keyframes back{0%{-webkit-transform:rotate(0deg)}
+100%{-webkit-transform:rotate(-359deg)}
+}

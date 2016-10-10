@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>时尚公主</title>
+    <link href="css/loading.css" rel="stylesheet" />
+    <script type="text/javascript">
+        document.onreadystatechange = subSomething;//当页面加载状态改变的时候执行这个方法.
+        var phoneWidth = parseInt(window.screen.width),
+            phoneScale = phoneWidth / 640,
+            ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            }
+            else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        }
+        else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+        function subSomething() {
+            document.getElementById("loading").style.display = "block";
+            document.body.style.overflow = "hidden";//禁用页面滚动条
+            if (document.readyState == "complete") { //当页面加载状态为完全结束时进入 
+                document.getElementById("loading").style.display = "none";
+            }
+        }
+    </script>
+
+    <link href="css/template.css" rel="stylesheet" />
+    <link href="css/page.css" rel="stylesheet" />
+    <link href="css/nav_new.css" rel="stylesheet" />
+</head>
+<body style="background: #e72956;">
+
+    <!--loading-->
+    <div id="loading" ontouchmove="event.preventDefault();">
+        <div class="cont scaleX2">
+            <div class="ring purple"></div>
+            <div id="content"><span>Lomark</span></div>
+        </div>
+        <div class="coverDiv"></div>
+    </div>
+    <div class="circle">
+           <div class="circle1 p_a animation1 delay1">
+              <img src="images/circle1_03.png"/>
+           </div>
+            <div class="circle2 p_a animation1 delay2" >
+               <img src="images/circle2_02.png"/>
+            </div>
+            <div class="circle3 p_a animation1 delay3" >
+                <img src="images/circle5_03.png"/>
+             </div>
+             <div class="circle4 p_a animation1 delay4" >
+                 <img src="images/circle4_03.png"/>
+             </div>
+             <div class="circle5 p_a animation1 delay1" >
+                 <img src="images/circle5_03.png"/>
+             </div>
+             <div class="circle6 p_a animation1 delay2">
+                 <img src="images/circle6_03.png "/>
+              </div>
+              <div class="circle7 p_a animation1 delay3 " >
+                  <img src="images/circle2_02.png"/>
+               </div>
+               <div class="circle8 p_a animation1 delay4 ">
+                   <img src="images/circle3_03.png"/>
+                </div>
+                <div class="circle9 p_a animation1 delay1">
+                   <img src="images/circle1_03.png"/>
+                </div>
+                <div class="logo_test p_a">
+                    <img src="images/first_show1.png" width="357" height="156">
+                 </div>
+    </div>
+
+<div class="container" id="container" ontouchmove="event.preventDefault();">
+        <!--top导航-->
+
+        <!--开场秀-->
+        <div class="firstShow">
+            <div class="white">
+                <img src="images/first_show2.png" />
+            </div>
+            <div class="black">
+                <img src="images/first_show1.png" />
+            </div>
+            <div class="end">
+                <img src="images/first_end1.png" class="top"/>
+                <img src="images/first_end2.png" class="bottom"/>
+            </div>
+        </div>
+
+        <!--导航罗盘-->
+        <div class="nav_compass" >
+            <div class="out rotate-back ">
+            	<img src="images/bigturn_03.png" width="575" height="565">
+                <div class="link_C0">
+                    <div ontouchstart="menu_color()"></div>
+                    <div ontouchstart="menu_special()"></div>
+                    <div ontouchstart="menu_special()"></div>
+                    <div ontouchstart="menu_bw()"></div>
+                    <div ontouchstart="menu_bw()"></div>
+                    <div ontouchstart="menu_color()"></div>
+                </div>
+            </div>
+            <div class="middle rotate-go " >
+                <img src="images/link_03.png" class="bg"/>
+                <div class="link_C1">
+                    <div ontouchstart="menu_special()"></div>
+                    <div ontouchstart="menu_color()"></div>
+                    <div ontouchstart="menu_color()"></div>
+                    <div ontouchstart="menu_bw()"></div>
+                    <div ontouchstart="menu_bw()"></div>
+                    <div ontouchstart="menu_special()"></div>
+                </div>
+            </div>
+            <div class="in go">
+                <img src="images/logo_03.png" > 
+            </div>
+  </div>
+
+        <!--音乐-->
+        <div class="music" style="transform:scale(2,2);-webkit-transform:scale(2,2);-moz-transform:scale(2,2);right:5%">
+            <img src="images/icon_music.png" alt="音乐按钮" class="icon-music turn"/>
+            <div class="music-tip"></div>
+        </div>
+        <div class="weixin_text" >
+            <img src="images/weixin_text.png" /> 
+        </div>
+
+    
+    
+        
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script src="js/util.js"></script>
+<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+<script src="js/page.js"></script>
+<script src="js/music.js"></script>
+<script src="js/shareWeixin.js"></script>
