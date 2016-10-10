@@ -1,0 +1,52 @@
+.fl{float:left;}
+.fr{float:right;}
+.dib{display: inline-block;}
+.db{display: block;}
+.dn{display: none;}
+.dt{display: table;vertical-align: middle;}
+.h1{height:1px;_font-size:0}
+.h2{height:2px;_font-size:0}
+.h3{height:3px;_font-size:0}
+.h4{height:4px;_font-size:0}
+.h5{height:5px;_font-size:0}
+.h6{height:6px;_font-size:0}
+.h7{height:7px;_font-size:0}
+.h8{height:8px;_font-size:0}
+.h9{height:9px;_font-size:0}
+.h10{height:10px;_font-size:0}
+.h11{height:11px;_font-size:0}
+.h12{height:12px;_font-size:0}
+.h13{height:13px;}
+.h14{height:14px;}
+.h15{height:15px;}
+.h16{height:16px;}
+.h17{height:17px;}
+.h18{height:18px;}
+.h19{height:19px;}
+
+.f12{font-size: 12px;}
+.f14{font-size: 15px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f22{font-size: 22px;}
+.f24{font-size: 24px;}
+.h23{height: 23px;_font-size:0;}
+.f26{font-size: 26px;}
+.f28{font-size: 28px;}
+.f30{font-size: 30px;}
+.f32{font-size: 32px;}
+
+.cl{clear:both;font-size: 0;}
+.mg{margin: 0 auto;}
+.noborder{border:0;}
+.nomargin{margin:0 !important;}
+.nomargr{margin-right: 0px !important;}
+.nopaddr{padding-right: 0 !important;}
+.noborright{border-right:0 !important;}
+.noborleft{border-left:0 !important;}
+
+.fl{float:left;}
+.fr{float:right;}
+
+.nomargin{margin:0 !important;}

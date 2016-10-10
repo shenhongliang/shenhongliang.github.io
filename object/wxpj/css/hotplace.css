@@ -1,0 +1,52 @@
+/* 热门旅行地 */
+.hotplace{
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	padding: 0 5%;
+	margin:0 auto;
+	box-sizing:border-box;
+}
+.hotplace .hotlist{
+	display: block;
+	width: 100%;
+	padding: 0 5%;
+	box-sizing:border-box;
+	text-align:center;
+	overflow: hidden;
+	border-bottom:1px solid #ccc;
+}
+.hotname{
+	font-size:22px;
+	line-height:40px;
+}
+.hotlist img{
+	width:140px;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.hotlist p{
+	width: 100%;
+	text-align: left;
+	text-indent: 2em;
+	font-size: 14px;
+	line-height:24px;
+	margin-bottom:20px;
+}
+/* .hotlist p.aligncenter{
+	text-align:center;
+} */
+
+@media screen and (min-width:520px){
+	.hotlist img{
+		width: 260px;
+	}
+	.hotname{
+		font-size: 24px;
+		line-height:50px;
+	}
+	.hotlist p{
+		font-size: 18px;
+		line-height: 32px;
+	}
+}

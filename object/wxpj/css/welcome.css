@@ -1,0 +1,732 @@
+/*欢迎页 -------------------------------*/
+body,html{
+	width: 100%; 
+	height: 100%;
+	max-width:640px;
+	/* min-width: 320px; */
+	margin:0 auto;	
+}
+
+@media screen and (min-height:480px)and(max-height:520px){
+	.swipe img{
+		width: 100%;
+		height: 100%;
+	}
+}
+img{
+	outline: none !important;
+}
+/* 静态显示图 */
+.indexwelcome{
+	width: 100%;
+	height: 100%;
+	max-width:640px;
+	overflow: hidden;
+	position: absolute;
+	margin:0 auto;
+	z-index: 999;
+}
+.indexwelcome img{
+	width: 100%;
+	height: 100%
+}
+
+.vanish{
+	-webkit-animation:vanish 3s ;
+	-moz-animation:vanish 3s ;
+	-ms-animation:vanish 3s ;
+	animation:vanish 3s ;
+}
+@-webkit-keyframes vanish {
+  0% {
+   -webkit-transform: scale3d(1, 1, 1);
+   -moz-transform: scale3d(1, 1, 1);
+   -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0, 0, 0);
+    -moz-transform: scale3d(0, 0, 0);
+    -ms-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+  }
+  : absolute;
+}
+@keyframes vanish {
+  0% {
+   -webkit-transform: scale3d(1, 1, 1);
+   -moz-transform: scale3d(1, 1, 1);
+   -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0, 0, 0);
+    -moz-transform: scale3d(0, 0, 0);
+    -ms-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+  }
+}
+
+/*  欢迎页轮播  */
+.swipe {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+ 
+}
+.swipe img{
+	width: 100%;
+	display:block;
+}
+.swipe-wrap{
+  	overflow: hidden;
+	position:relative;
+	height:100% !important;
+}
+.swipe-wrap>div{
+  	float:left;
+  	width:100%;
+	height:100%  !important;
+  	position: relative; 
+  	background-color: #0ea9b1;
+}
+
+/* 动画布局 */
+
+
+/* 第一张动画++++++++++++++++++++++++++++++++++++++++++ */
+.swipe-wrap > div.nth0 .child{
+	width:320px;
+	height:440px;
+	background:url(../images/child.png) no-repeat center center;
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-ms-background-size:contain;
+	background-size:contain;
+	-webkit-transform:translate(-50% , -50%);
+	-moz-transform:translate(-50% , -50%);
+	-ms-transform:translate(-50% , -50%);
+	transform:translate(-50% , -50%);
+	outline: none;
+	z-index: 100;
+}
+
+.child .tu{
+	width:45px;
+	height:60px;
+	position: absolute;
+	z-index: 101;
+
+}
+.child .tu.lefthand{
+	left:16%;
+	top:35%;
+	-webkit-transform:rotate(-15deg);
+	-moz-transform:rotate(-15deg);
+	-ms-transform:rotate(-15deg);
+	transform:rotate(-15deg);
+	transtion:all 1s ease ;
+	animation:xuanzhang 1.5s linear  infinite alternate;
+	-webkit-animation:xuanzhang 1.5s linear  infinite alternate;
+	-moz-animation:xuanzhang 1.5s linear  infinite alternate;
+	-ms-animation:xuanzhang 1.5s linear  infinite alternate;
+	transform-origin:99% 80%;
+	background:url(../images/lefthand.png) no-repeat ;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size: contain;
+	outline: none;
+}
+.child .tu.righthand{
+	right:14%;
+	top:35%;
+	-webkit-transform:rotate(15deg);
+	-moz-transform:rotate(15deg);
+	-ms-transform:rotate(15deg);
+	transform:rotate(15deg);
+	animation:xuanzhang2 1.5s linear   infinite alternate;
+	-webkit-animation:xuanzhang2 1.5s linear  infinite  alternate;
+	-moz-animation:xuanzhang2 1.5s linear  infinite  alternate;
+	-ms-animation:xuanzhang2 1.5s linear  infinite  alternate;
+	transform-origin:12% 79%;
+	background:url(../images/righthand.png) no-repeat ;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size: contain;
+	outline: none;
+}
+@media screen and (min-width:480px){
+	.child .tu.lefthand{
+		left:19%;
+		top:37%;
+	}
+	.child .tu.righthand{
+		right:17%;
+		top:36.7%;
+	}
+}
+
+.title{
+	width:70%;
+	position: absolute;
+	top:12%;
+	left:50%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	transform:translatex(-50%);
+}
+
+.nth0 .add{
+	position: absolute;
+	z-index: 100;
+}
+.nth0 .address1{
+	width:58px;
+	height: 77px;
+	background:url(../images/address1.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	top:55%;
+	left:-0px;
+	animation:float1 4s infinite;
+	-webkit-animation:float1 4s infinite;
+	-moz-animation:float1 4s infinite;
+	-ms-animation:float1 4s infinite;
+	outline: none;
+}
+.nth0 .address2{
+	width:35px;
+	height:48px;
+	background:url(../images/address2.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	top:63%;
+	left:66%;
+	 animation:float2 4s infinite;
+	-webkit-animation:float2 4s infinite 1s;
+	-moz-animation:float2 4s infinite 1s;
+	-ms-animation:float2 4s infinite 1s;
+	outline: none;
+}
+.nth0 .address3{
+	width:24px;
+	height:32px;
+	background:url(../images/address3.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	top: 61%;
+	left:84%;
+	animation:float3 4s infinite;
+	-webkit-animation:float3 4s infinite 3s;
+	-moz-animation:float3 4s infinite 3s;
+	-ms-animation:float3 4s infinite 3s;
+	outline: none;
+}
+
+@-webkit-keyframes float1{
+	form{
+		top:55%;
+	}
+	50%{
+		top:60%;
+	}
+	to{
+		top:55%;
+	}
+}
+@keyframes float1{
+	form{
+		top:55%;
+	}
+	50%{
+		top:60%;
+	}
+	to{
+		top:55%;
+	}
+}
+
+@-webkit-keyframes float2{
+	form{
+		top:63%;
+	}
+	50%{
+		top:66%;
+	}
+	to{
+		top:63%;
+	}
+}
+@keyframes float2{
+	form{
+		top:63%;
+	}
+	50%{
+		top:66%;
+	}
+	to{
+		top:63%;
+	}
+}
+
+@-webkit-keyframes float3{
+	form{
+		top:61%;
+	}
+	50%{
+		top:65%;
+	}
+	to{
+		top:61%;
+	}
+}
+@keyframes float3{
+	form{
+		top:61%;
+	}
+	50%{
+		top:65%;
+	}
+	to{
+		top:61%;
+	}
+}
+
+
+@-webkit-keyframes xuanzhang{
+	0%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	10%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	20%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	30%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	40%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	50%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	51{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	100%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+}
+@keyframes xuanzhang{
+	0%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	10%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	20%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	30%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	40%{
+		-webkit-transform:rotate(-15deg)  ;
+		-moz-transform:rotate(-15deg)  ;
+		-ms-transform:rotate(-15deg)  ;
+		transform:rotate(-15deg)  ;
+	}
+	50%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	51{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	100%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+}
+
+@-webkit-keyframes xuanzhang2{
+	0%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	10%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	20%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	30%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	40%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	50%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	51{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	100%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+}
+@keyframes xuanzhang2{
+	0%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	10%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	20%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	30%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	40%{
+		-webkit-transform:rotate(15deg)  ;
+		-moz-transform:rotate(15deg)  ;
+		-ms-transform:rotate(15deg)  ;
+		transform:rotate(15deg)  ;
+	}
+	50%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	51{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+	100%{
+		-webkit-transform:rotate(0deg)  ;
+		-moz-transform:rotate(0deg)  ;
+		-ms-transform:rotate(0deg)  ;
+		transform:rotate(0deg)  ;
+	}
+}
+
+.nth0 .nth0foot{
+	width: 100%;
+	/* height:120px; */
+	overflow: hidden;
+	position: absolute;
+	bottom: 0px;
+	left:0;
+}
+.nth0 .nth0foot img{
+	width: 100%;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size:contain;
+}
+
+@media screen and (min-width:480px){
+	.swipe-wrap > div.nth0 .child{
+		width:420px;
+		height:550px;
+	}
+}
+@media screen and (max-height:520px){
+	.title{
+		width: 70%;
+		top:9%;
+	}
+
+}
+/* 第二张动画+++++++++++++++++++++++++++ */
+.swipe-wrap > div.nth1 .person{
+	display: block;
+	display: block;
+	width:160px;
+	height:390px;
+	position: absolute;
+	top:28%;
+	left:50%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	background:url(../images/person.png) no-repeat  center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	outline: none;
+}
+.swipe-wrap > div.nth1 .mouth{
+	position: absolute;
+	top:65%;
+	left:52%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	width:80px;
+	height:73px;
+	background:url(../images/mouthopen.gif) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	outline: none;
+}
+@media  (min-height:480px) and (max-height: 570px){
+	.swipe-wrap > div.nth1 .person{
+		width: 140px;
+		height: 330px;
+
+	}
+}
+
+第三张动画
+.swipe-wrap > div.nth2{
+	background-color: #3bbec0;
+}
+.swipe-wrap > div.nth2 .tu{
+	width: 90%;
+	position: absolute;
+	bottom: 0px;
+	right:0px;
+	z-index: 111;
+}
+div.nth2 .tu img{
+	z-index: 555;
+}
+div.nth2 .tu .righthand{
+	width:35%;
+	height:50%;
+	background:url(../images/trumpet.png) no-repeat center center; 
+	position: absolute;
+	top:2%;
+	left:2%;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	z-index:444;
+	-webkit-animation:zoom 1s infinite;
+	-moz-animation:zoom 1s infinite;
+	-ms-animation:zoom 1s infinite;
+	animation:zoom 1s infinite;
+	outline: none;
+}
+
+@-webkit-keyframes zoom{
+	form{
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		-ms-transform:scale3d(1,1,1);
+		transform:scale3d(1,1,1);
+	}
+	50%{
+		-webkit-transform:scale3d(1.1,1.1,1.1);
+		-moz-transform:scale3d(1.1,1.1,1.1);
+		-ms-transform:scale3d(1.1,1.1,1.1);
+		transform:scale3d(1.1,1.1,1.1);
+	}
+	to{
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		-ms-transform:scale3d(1,1,1);
+		transform:scale3d(1,1,1);	
+	}
+}
+
+.nth2 .nth2foot{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width: 100%;
+	height:220px;
+	overflow: hidden;
+	z-index:20;
+}
+.nth2foot img{
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+	width: 100%;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size: contain;
+}
+第四张进入主页 
+.nth3 {
+	position: relative;
+}
+.nth3 img{
+	height: 100%;
+}
+.nth3 .nth3child1{
+	width:22%;
+	height:18%;
+	background:url(../images/nth3child1.png) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size:contain;
+	position: absolute;
+	top:40%;
+	left:50%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	transform:translatex(-50%);
+	outline: none;
+}
+.nth3child1 .nth3child1-1{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background:url(../images/nth3child-1.png) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size:contain;
+	position: absolute;
+	top:0px;
+	left:0px;
+	display: none;
+	outline: none;
+
+}
+.nth3 .arrows{
+	width:22px;
+	height:100px;
+	background:url(../images/arrows.png) no-repeat center center;
+	position: absolute;
+	top:60%;
+	left:50%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-ms-background-size:contain;
+	background-size:contain;
+	outline: none;
+}
+.nth3 .nth3child2{
+	width: 22%;
+	height: 20%;
+	background:url(../images/nth3child2.png) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-ms-background-size: contain;
+	background-size:contain;
+	position: absolute;
+	bottom:2%;
+	left:50%;
+	-webkit-transform:translatex(-50%);
+	-moz-transform:translatex(-50%);
+	-ms-transform:translatex(-50%);
+	outline: none;
+}
+@media screen and (max-height:500px){
+	.nth3 .arrows{
+		width:15px;
+		height:80px;
+	}
+}

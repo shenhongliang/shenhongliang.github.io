@@ -1,0 +1,52 @@
+/* 景点介绍 */
+.scenic{
+	width: 100%;
+	margin:0 auto;
+	box-sizing:border-box;
+}
+.scenicpic{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+}
+.scenicpic img{
+	width: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.scenicpic h4{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left:0px;
+	bottom:2px;
+	background-color:rgba(0,0,0,0.5);
+	font-size: 16px;
+	line-height: 40px;
+	text-indent: 2em;
+	color:#fff;
+}
+
+.intro{
+	width: 100%;
+	line-height: 40px;
+	font-size: 14px;
+	color:#363636;
+	text-align: left;
+	text-indent: 2em;
+	padding: 0px 15px;
+	box-sizing:border-box;
+	border-bottom:1px solid #ccc;
+}
+.intro.twoline{
+	line-height:26px;
+}
+.sceniccontent{
+	font-size: 14px;
+	line-height: 28px;
+	text-indent: 2em;
+	color:#363636;
+	padding:15px 15px;
+	box-sizing:border-box;
+}

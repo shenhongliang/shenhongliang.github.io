@@ -1,0 +1,103 @@
+body,html{
+	background-color:#e6e6e6!important;
+}
+/* 攻略列表 */
+.list{
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	margin:0 auto;
+	box-sizing:border-box;
+}
+.list li{
+	width: 100%;
+	padding:0 5%;
+	box-sizing:border-box;
+	overflow: hidden;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.list li::before{
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top:50%;
+	left:5%;
+	-webkit-transform:translatey(-50%);
+	-moz-transform:translateY(-50%);
+	transform:translateY(-50%);
+	box-sizing:border-box;
+	background-color:red;
+}
+
+.list li.num1::before{
+	background:url(../images/ic/gaikuang.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num2::before{
+	background:url(../images/ic/xiaofei.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num3::before{
+	background:url(../images/ic/tongxun.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num4::before{
+	background:url(../images/ic/gonglue.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num5::before{
+	background:url(../images/ic/neijiao.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num6::before{
+	background:url(../images/ic/waijiao.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num7::before{
+	background:url(../images/ic/churu.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num8::before{
+	background:url(../images/ic/jieqing.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li.num9::before{
+	background:url(../images/ic/liangdian.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.list li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.list li p{
+	font-size: 16px;
+	line-height:70px;
+	padding-left: 60px;
+/* 	color:#08AD83; */
+}
+a>.go{
+	position: absolute;
+	top:50%;
+	margin-top: -10px;
+	right:5%;
+	width:17px;
+	height:26px;
+	background:url(../images/ic/go.png) no-repeat center center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+

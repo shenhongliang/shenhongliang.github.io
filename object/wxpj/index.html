@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta content="width=320 , initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=0" name="viewport" id="viewport" />
+
+    <title>日本旅游</title>
+    <!--  css样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	
+</head>
+<body>
+    <!-- 首页内容 --> 
+   <!-- <div class="indexwelcome"><img src="images/app.jpg" alt=""></div> -->
+
+    <div id="welcome" class="swipe">
+    <div class='swipe-wrap'>
+        <div class="nth0"><!-- 第一张图片 -->
+           <div class="nth0title title"><img src="images/nth0-title.png" title="目的地天气随时查"></div>
+           <span class="child">
+               <i class="tu lefthand"></i>
+               <i class="tu righthand"></i>
+               <div class="address">
+                   <span class="add address1"></span>
+                   <span class="add address2"></span>
+                   <span class="add address3"></span>
+               </div>
+           </span>
+           <div class="nth0foot"><img src="images/nth0foot.png" alt=""></div>
+        </div>
+
+        <div class="nth1"> <!-- 第二张图片 -->
+            <div class="nth1title title">
+                <img src="images/nth1-title.png" title="会说话的出游必备翻译专家">
+            </div>
+            <img src="images/header-2.jpg"/>
+            <span class="person">
+                <i class="mouth"></i>
+            </span>
+        </div>
+
+        <div class="nth2"> <!-- 第三张图片 -->
+            <div class="nth1title title">
+                <img src="images/nth2-title.png" title="从有了它，妈妈在也不用担心我去日本了">
+            </div>
+            <div class="tu">
+                <img src="images/nth2iphone.png" alt="">
+                <span class="righthand"></span>
+            </div>
+            <div class="nth2foot">
+                <img src="images/nth2foot.png" alt="">
+            </div>
+        </div>
+         <div class="nth3"><!-- 第四张进入主页 -->
+            <img src="images/header-4.jpg" />
+            <span class="nth3child1">
+                <i class="nth3child1-1"></i>
+            </span>
+            <span class="arrows"></span>
+            <span id="intro" class="nth3child2"></span>
+                    </div>
+    </div>
+       
+    </div>
+    <script type="text/javascript" src="js/swipe.js"></script>
+    <script type="text/javascript" src="js/welcome.js"></script>
+    <script type="text/javascript">
+
+    /*$(document).ready(function(){
+        hid() ;
+        $("#intro").click(function(){
+        
+            $(this).fadeOut(1000);            
+            $(this).siblings(".nth3child1").children().fadeIn(1000,function(){
+
+            });
+       })
+
+        function hid(){
+            $(".indexwelcome").addClass('vanish');
+            setTimeout(function(){$(".vanish").hide();},1500);
+            }
+
+             setTimeout("hid()",2000);
+    })
+            */
+    </script>
+</body>
+</html>
