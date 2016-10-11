@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi">
+	<title>ULD 你最亲密的朋友</title>
+	<link rel="stylesheet" href="css/animated.css" type="text/css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+	<div class="content">
+          <div id="txt_box9">
+            <p class="ULD_27">观看视频<br>体验来自亲密朋友的防水轻盈温暖</p>
+            <div class="video" width = "600" height="331">
+              <video src="img/0924_uld_50s1.mov" id="video" width = "600" height="331"  poster="img/video_bg.jpg"></video>
+            </div>
+            
+            <p class="ULD_28">新款上市 优衣优享
+              <!-- <br>即日起至10月8日 249元起 -->
+            </p>
+            <p><a  class="product" href="men.html">查看更多暖心选择&gt;</a></p>
+            <!-- <a  class="promotion" href="http://chirashi.uniqlo.com/global/cn/">查看更多国庆特惠&gt;</a> -->
+          </div>
+
+
+          <div id="txt_box8">
+            <div id="back">×</div>
+            <p class="ULD_24">把轻盈温暖传递给好友<br>将有机会把高级轻型羽绒服收入囊中</p>
+            <img class="weixin" src="img/weixin.jpg" alt="">
+            <p class="ULD_25">长按二维码<br>关注优衣库官方微信</p>
+            <p class="ULD_26">将在活动结束后随机挑选50位传递轻盈温暖的<br>幸运用户，通过优衣库微信消息告知中奖信息<br>敬请关注优衣库官方微信！</p>
+          </div>
+          
+	</div>
+
+	<script type="text/javascript" >
+     //视频开关
+    var oVideo = document.getElementById('video');
+    var ON = true;
+    oVideo.onclick = function(){
+      if(ON){
+        oVideo.play();
+        ON = false;
+      }else{
+       oVideo.pause();
+       ON = true;
+      }
+    };
+  
+    var oTxt_box8 = document.getElementById('txt_box8');
+    var oBack = document.getElementById('back');
+    oBack.onclick = function(){
+      oTxt_box8.style.display = 'none';
+    };
+  </script>
+</body>
+</html>

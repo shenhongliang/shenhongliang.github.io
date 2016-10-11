@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ULD 你最亲密的朋友</title>
+	<!-- <meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi"> -->
+	<link rel="stylesheet" type="text/css" href="css/men.css">
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div class="content">
+	<!-- choose page -->
+	<div id="chooseCont" class="page-it" >
+		<div class="chooseBg">
+			<div class="chooseBg_img"><img src="img/choseMain.jpg" height="1237" width="750" alt=""></div>
+			<img class="chooseMen" id="chooseMen"  src="img/choosemen.png" height="225" width="143" alt="">
+			<img class="chooseWoman" id="chooseWoman" src="img/chooseWoman.png" height="251" width="143" alt="">
+		</div>
+	</div>	
+<!-- 选男装 -->
+	<div id="menCont" class="page-it" style="display:none;">
+		<div id="tFocus">
+			<div class="prev" id="prev"></div>
+			<div class="next" id="next"></div>
+			<ul id="tFocus-pic">
+				<li><img src="img/m/1.jpg"  alt="" /></li>
+				<li><img src="img/m/2.jpg" alt=" " /></li>
+				<li><img src="img/m/3.jpg" alt="" />  </li>
+				<li><img src="img/m/4.jpg" alt="" />  </li>
+				<li><img src="img/m/5.jpg" alt="" />  </li>
+				<!-- <li><img src="img/m/6.jpg" alt="" />  </li> -->
+				<li><img src="img/m/7.jpg" alt="" />  </li>
+				<li><img src="img/m/8.jpg" alt="" />  </li>
+				<li><img src="img/m/9.jpg" alt="" />  </li> 
+			</ul>
+			
+			<div id="tFocusBtn">
+				<a href="javascript:void(0);" id="tFocus-leftbtn">上一张</a>
+				<div id="tFocus-btn">
+					<ul id="tFocus_ul">
+						<li><img src="img/m/sm1.jpg" alt="" /></li>
+						<li><img src="img/m/sm2.jpg" alt="" /></li>
+						<li><img src="img/m/sm3.jpg" alt="" /></li>
+						<li><img src="img/m/sm4.jpg" alt="" /></li>
+						<li><img src="img/m/sm5.jpg" alt="" /></li>
+						<!-- <li><img src="img/m/sm6.jpg" alt="" /></li> -->
+						<li><img src="img/m/sm7.jpg" alt="" /></li>
+						<li><img src="img/m/sm8.jpg" alt="" /></li>
+						<li><img src="img/m/sm9.jpg" alt="" /></li>	
+					</ul>
+				</div>
+			<a href="javascript:void(0);" id="tFocus-rightbtn">下一张</a>
+			</div>
+		</div><!--tFocus end-->
+
+		<div class="chooseBtn_all">
+			<div class="cur" id="menBtn">暖 心 男 款</div>
+			<div id="womanBtn">轻 柔 女 款</div>
+		</div>
+		<div class="musicBg" id="music">
+            <audio  loop="loop" src="img/ULD_Music.mp3"></audio>
+			<img src="img/music_on.png" height="76" width="76" alt="">
+		</div>
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="js/men.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	addLoadEvent(Focus());
+</script>
+
+</body>
+</html>
