@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/swipe.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />	
+
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.banxin{
+			width: 320px;
+			margin: 0 auto;
+		}
+		#header{
+			width: 100%;
+			height: 78px;
+			background-color: #E30165;
+		
+		}
+		
+		#header ul{
+			position: relative;
+			height: 78px;
+			width: 100%;
+
+		}
+		#header ul li{
+			float: left;
+			padding-top: 15px;
+		}
+		#header ul li.no3{
+			float: right;
+		}
+		#header ul li img{
+			width: 100%;
+			height: 100%;
+			-webkit-transform:scale(0.8);
+		}
+		#header ul li.no1{
+			width: 30%;
+			height: 49px;
+		}
+		#header ul li.no2{
+			width: 40%;
+			position: absolute;
+			top: 0;
+			left: 35%;
+			width: 25%;
+			height: 49px;
+		
+		}
+		#header ul li.no3{
+			width: 30%;
+			height: 49px;
+		}
+		
+		#header .inner ul li.no3 img{
+			border-left: 1px solid #ccc;
+		}
+		#menu{
+			width: 100%;
+			height: 64px;
+			background-color: #F2F2F2;
+			
+		}
+		#menu ul {
+			width: 100%;
+		}
+		#menu ul li{
+			width: 14.285%;
+			height: 64px;
+			float: left;
+			width: 14%;
+			text-align: center;
+			
+		}
+			#menu ul li a:link,#menu ul li a:visited{
+			text-decoration: none;
+			color: #000;
+			font: 12px/64px "微软雅黑","宋体";
+	}
+	
+	.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  
+}
+.swipe img{
+	width: 100%;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  	float:left;
+  	width:100%;
+  	position: relative;
+}
+.xiaoyuandian{
+	width: 100%;
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+
+	-webkit-transform:translateX(-50%);
+
+
+}
+.xiaoyuandian ul{
+	list-style: none;
+	width: 80px;
+	margin: 0 auto;
+}
+.xiaoyuandian ul li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+	border-radius: 8px;
+	background:orange;
+	/*opacity: 0.6;*/
+}
+.xiaoyuandian ul li.cur{
+	background:red;
+	opacity: 0.6;
+}
+.bar{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 54px;
+	
+}
+.bar img{
+	height: 54px;
+	width: 100%;
+}
+.content {
+	width: 100%;
+}
+.content .nav {
+	overflow: hidden;
+}
+.content .nav ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	-webkit-transform:translateX(-2%);
+}
+.content .nav ul li img{
+	width: 100%;
+}
+.content .nanzhuang{
+	width: 100%;
+}
+.content .nanzhuang  h3{
+	width: 100%;
+	text-align: center;
+	font: 28px/61px "微软雅黑","宋体";
+}
+.content .nanzhuang {
+	position: relative;
+	width: 100%;
+}
+.content .nanzhuang .man_clo{
+	width: 100%;
+}
+.content .nanzhuang .man_clo .nantu1 img{
+	width: 100%;
+}
+.content .nanzhuang .man_clo .nantu2{
+	margin-top: 10px;
+	width: 100%;
+}
+.content .nanzhuang .man_clo .nantu2 .tu1{
+	width: 50%;
+	padding-right: 5px;
+	float: left;
+	box-sizing:border-box;
+}
+.content .nanzhuang .man_clo .nantu2 .tu2{
+	float: left;
+	padding-left: 5px;
+	width: 50%;
+		box-sizing:border-box;
+}
+.content .nanzhuang .man_clo .nantu2 .tu3{
+	width: 50%;
+	padding-right: 5px;
+	float: left;
+	margin-top: 10px;
+	box-sizing:border-box;
+}
+.content .nanzhuang .man_clo .nantu2 .tu4{
+	width: 50%;
+	padding-left: 5px;
+	float: left;
+	margin-top: 10px;
+	box-sizing:border-box;
+}
+
+
+
+.content .xiebao{
+	width: 100%;
+}
+.content .xiebao  h3{
+	width: 100%;
+	text-align: center;
+	font: 28px/61px "微软雅黑","宋体";
+}
+.content .xiebao {
+	position: relative;
+	width: 100%;
+}
+.content .xiebao .man_clo{
+	width: 100%;
+}
+.content .xiebao .man_clo .nantu1 img{
+	width: 100%;
+}
+.content .xiebao .man_clo .nantu2{
+	margin-top: 10px;
+	width: 100%;
+}
+.content .xiebao .man_clo .nantu2 .tu1{
+	width: 50%;
+	padding-right: 5px;
+	float: left;
+	box-sizing:border-box;
+}
+.content .xiebao .man_clo .nantu2 .tu2{
+	float: left;
+	padding-left: 5px;
+	width: 50%;
+		box-sizing:border-box;
+}
+.content .xiebao .man_clo .nantu2 .tu3{
+	width: 50%;
+	padding-right: 5px;
+	float: left;
+	margin-top: 10px;
+	box-sizing:border-box;
+}
+.content .xiebao .man_clo .nantu2 .tu4{
+	width: 50%;
+	padding-left: 5px;
+	float: left;
+	margin-top: 10px;
+	box-sizing:border-box;
+}
+.h75{
+	height: 50px;
+	width: 100%;
+
+}
+ #footer{
+	width: 100%;
+	height: 27px;
+	border-bottom: 1px solid #ccc;
+	box-shadow: #bbb 1px 1px 0px;
+	margin-bottom: 20px;
+	
+}
+ #footer .login a{
+ 	float: left;
+ 	margin-right: 10px;
+ }
+ #footer .login a:link,  #footer .login a:visited{
+	text-decoration: none;
+	font: 16px/27px "微软雅黑","宋体";
+	color: #004475;
+	border: none;
+	box-shadow: none;
+}
+#footer .login{
+	height: 27px;
+	padding-left: 15px;
+}
+#footer span img{
+	width: 37px;
+	height: 14px;
+}
+#footer span{
+	float: right;
+	position: relative;
+	top: 10px;
+	right: 15px;
+	
+	
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#footer .login span").click(
+			function() {
+				$("html,body").animate({"scrollTop":0},1000);
+			}
+		);
+	});
+</script>
+</head>
+<body>
+	<div class="banxin">
+		<div id="header">
+			<div class="inner">
+				<ul>
+					<li class="no1">
+						<img src="images/download_app.jpg" alt="" />
+					</li>
+					<li class="no2">
+						<img src="images/mbs_logo.jpg" alt="" />
+					</li>
+					<li class="no3">
+						<img src="images/search_button.jpg" alt="" />
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="banxin">
+	<div id="menu">
+		<ul>
+			<li class="cur">
+				<a href="#">推荐</a>
+			</li>
+			<li>
+				<a href="#">限时特卖</a>
+			</li>
+			<li>
+				<a href="#">女装</a>
+			</li>
+			<li>
+				<a href="#">内衣</a>
+			</li>
+			<li>
+				<a href="#">推荐</a>
+			</li>
+			<li>
+				<a href="#">内衣</a>
+			</li>
+			<li>
+				<a href="#">推荐</a>
+			</li>
+
+		</ul>
+	</div>
+	</div>
+	<div class="banxin">
+		<div id="huadonglunbo" class="swipe">
+			<div class='swipe-wrap'>
+				<div>
+					<img src="images/1.jpg" />
+				</div>
+				<div>
+					<img src="images/2.jpg" />
+				</div>
+				<div>
+					<img src="images/3.jpg" />
+				</div>
+				<div>
+					<img src="images/4.jpg" />
+				</div>
+			</div>
+			<div class="xiaoyuandian">
+				<ul>
+					<li class="cur"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="bar">
+				<img src="images/banner_bottom.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/huadong.js"></script>
+	<div class="banxin">
+	<div class="content">
+		<div class="nav">
+			<ul>
+				<li>
+					<img src="images/fun_button_03.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_04.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_05.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_06.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_08.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_09.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_10.png" alt="" />
+				</li>
+				<li>
+					<img src="images/fun_button_11.png" alt="" />
+				</li>
+			</ul>
+		</div>
+		<div class="nanzhuang">
+			<h3>男装馆</h3>
+			<div class="man_clo">
+				<div class="nantu1">
+					<img src="images/NZ_i.jpg" alt="" />
+				</div>
+				<div class="nantu2">
+					<img src="images/NZ01_i.jpg" alt="" class="tu1"/>
+					<img src="images/NZ02_i.jpg" alt="" class="tu2"/>
+					<img src="images/NZ02_i.jpg" alt="" class="tu3"/>
+					<img src="images/NZ02_i.jpg" alt="" class="tu4"/>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="xiebao">
+			<h3>鞋包馆</h3>
+			<div class="man_clo">
+				<div class="nantu1">
+					<img src="images/xb_03.jpg" alt="" />
+				</div>
+				<div class="nantu2">
+					<img src="images/xb_06.jpg" alt="" class="tu1"/>
+					<img src="images/xb_08.jpg" alt="" class="tu2"/>
+					<img src="images/xb_11.jpg" alt="" class="tu3"/>
+					<img src="images/xb_12.jpg" alt="" class="tu4"/>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<div class="banxin">
+	<div class="cl h75"></div>
+		<div id="footer">
+			<div class="login">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#">用户反馈</a>
+				<span>
+					<img src="images/footer1.jpg" alt="" />
+				</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
